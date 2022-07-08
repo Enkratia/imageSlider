@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="center">
+        <div class="images">
+            <div class="slide img1"><img src="bg1.jpg" alt="bg1"></div>
+            <div class="slide"><img src="bg2.jpg" alt="bg2"></div>
+            <div class="slide"><img src="bg3.jpg" alt="bg3"></div>
+            <div class="slide"><img src="bg4.jpg" alt="bg4"></div>
+            <div class="slide"><img src="bg5.jpg" alt="bg5"></div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="btn1 active"></a>
+            <a href="#" class="btn2"></a>
+            <a href="#" class="btn3"></a>
+            <a href="#" class="btn4"></a>
+            <a href="#" class="btn5"></a>
+        </div>
+    </div>
+   <script>
+    $ (document).ready(function(){
+        $(".btn1").click(function(){
+            $(".img1").css("margin-left","0");
+        });
+        $(".btn2").click(function(){
+            $(".img1").css("margin-left","-20%");
+        });
+        $(".btn3").click(function(){
+            $(".img1").css("margin-left","-40%");
+        });
+        $(".btn4").click(function(){
+            $(".img1").css("margin-left","-60%");
+        });
+        $(".btn5").click(function(){
+            $(".img1").css("margin-left","-80%");
+        });
+        $("a").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    });
+   </script>
+
+</body>
+</html>
